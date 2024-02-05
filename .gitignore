@@ -164,3 +164,4 @@ cython_debug/
 
 # Large data files
 GoodReads_100k_books.csv
+ratings.csv
