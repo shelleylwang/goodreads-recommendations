@@ -173,3 +173,7 @@ goodreads_book_authors.json
 goodreads_book_series.json
 book_id_map.csv
 user_id_map.csv
+
+goodreads_books_poetry.json
+goodreads_interactions_poetry.json
+goodreads_reviews_poetry.json
