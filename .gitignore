@@ -165,3 +165,9 @@ cython_debug/
 # Large data files
 GoodReads_100k_books.csv
 ratings.csv
+goodreads_book_works.json
+goodreads_book_authors.json
+goodreads_book_series.json
+goodreads_interactions.csv
+book_id_map.csv
+goodreads_reviews_spoiler_raw.json
