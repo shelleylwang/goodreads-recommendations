@@ -168,6 +168,7 @@ ratings.csv
 goodreads_books.json.gz
 goodreads_reviews_spoiler_raw.json
 goodreads_reviews_spoiler_raw.json.gz
+goodreads_reviews_spoiler.json.gz
 goodreads_interactions.csv
 goodreads_book_genres_initial.json
 goodreads_book_genres_initial.json.gz
@@ -176,6 +177,15 @@ goodreads_book_authors.json
 goodreads_book_series.json
 book_id_map.csv
 user_id_map.csv
+
+goodreads_books_romance.json.gz
+goodreads_books_fantasy_paranormal.json.gz
+goodreads_books_young_adult.json.gz
+goodreads_books_comics_graphic.json.gz
+goodreads_books_history_biography.json.gz
+goodreads_books_mystery_thriller_crime.json.gz
+goodreads_books_children.json.gz
+goodreads_books_poetry.json.gz
 
 goodreads_books_poetry.json
 goodreads_interactions_poetry.json
