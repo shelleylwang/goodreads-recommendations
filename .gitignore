@@ -163,6 +163,9 @@ cython_debug/
 .DS_Store
 
 # Large data files
+gr_reviews_clean.csv
+gr_reviews_per_book.csv
+
 GoodReads_100k_books.csv
 ratings.csv
 goodreads_books.json.gz
