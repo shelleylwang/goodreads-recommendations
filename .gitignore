@@ -164,6 +164,7 @@ cython_debug/
 
 # Large data files
 gr_reviews_clean.csv
+gr_reviews_full.csv
 gr_reviews_per_book.csv
 metadata.csv
  
