@@ -27,8 +27,10 @@ I use 4 datasets from them.
 4. The dataset 'goodreads_reviews_spoiler.json.gz' contains over 1.3 million individual rows. Each row is one user's text review and rating out of 5 for one specific book
 
 ## Data Preparation
-From my four datasets I was able to clean 3 datasets of interest for my two recommendation systems
-1. First I used dataset (1) 
+From my four datasets I was able to clean 3 datasets of interest for my two recommendation systems. 
+a. First I used dataset (1) as the source for user-facing recommendations. As such, it needed all the book metadata. (1) was missing genres so I used dataset (2) to add in genre data, joining on the shared book_ids. I did the same using dataset (3) for authors' names. I then dropped some nonsense values from publication year. Finally, I imputed some nulls in page numbers using the genre-specific averages.
+b. Next I used dataset (4) to create a per-user rating dataset. I grouped by user, ending up with one row per user. I concatenated all their review text, then subsetted to just users who had written at least 5 reviews.
+c. Finally, I combined the 
 
 ## Collaborative Filtering
 
@@ -63,14 +65,40 @@ Obviously recommendation systems like this are overall applicable to any site an
 ## Repo Structure
 ```
 ├── data
-│   ├── cleaned_data.csv
-│   ├── COVID-19_Vaccinations_in_the_United_States_Jurisdiction_20240103
-│   ├── cc-est2022-agesex-all.csv
-│   ├── cc-est2022-all
-│   ├── Education.xlsx
-│   ├── PovertyEstimates.xlsx
-│   ├── COVID-19_Vaccinations_by_County.csv
-│   ├── 2020_US_County_Level_Presidential_Results.csv
+│   ├── gr_reviews_clean.csv
+│   ├── gr_reviews_full.csv
+│   ├── gr_reviews_per_book.csv
+│   ├── metadata.csv
+│   ├── metadata_and_reviews_4cii.csv
+│   ├── metadata_and_reviews_4ciii.csv
+│   ├── dtm.parquet
+│   ├── reviews_nlp.csv
+│   ├── meta_gr.csv
+│   ├── GoodReads_100k_books.csv
+│   ├── ratings.csv
+│   ├── goodreads_books.json.gz
+│   ├── goodreads_reviews_spoiler_raw.json
+│   ├── goodreads_reviews_spoiler_raw.json.gz
+│   ├── goodreads_reviews_spoiler.json.gz
+│   ├── goodreads_interactions.csv
+│   ├── goodreads_book_genres_initial.json
+│   ├── goodreads_book_genres_initial.json.gz
+│   ├── goodreads_book_works.json
+│   ├── goodreads_book_authors.json
+│   ├── goodreads_book_series.json
+│   ├── book_id_map.csv
+│   ├── user_id_map.csv
+│   ├── goodreads_books_romance.json.gz
+│   ├── goodreads_books_fantasy_paranormal.json.gz
+│   ├── goodreads_books_young_adult.json.gz
+│   ├── goodreads_books_comics_graphic.json.gz
+│   ├── goodreads_books_history_biography.json.gz
+│   ├── goodreads_books_mystery_thriller_crime.json.gz
+│   ├── goodreads_books_children.json.gz
+│   ├── goodreads_books_poetry.json.gz
+│   ├── goodreads_books_poetry.json
+│   ├── goodreads_interactions_poetry.json
+│   ├── goodreads_reviews_poetry.json
 ├── Images
 │   ├── readme_header.png
 │   ├── goodreads_traffic.png
