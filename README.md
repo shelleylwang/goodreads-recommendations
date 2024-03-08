@@ -37,8 +37,6 @@ C. Finally, I combined datasets (A) and the pre-subsetted (B) into a per-book me
 
 Dataset (B) was used for collaborative filtering, and dataset (C) was used for content-based. Dataset (A) was used in both to return recommendations.
 
-## Collaborative Filtering
-
 ## Content-Based
 A content-based recommendation system uses various features of the products to calculate similarity scores that can be used to return the top most similar products to an inputted product. In this case, a user will be prompted to enter a book title and how many recommendations they would like, then my recommender system will return that number of similar books as recommendations. 
 
@@ -55,7 +53,13 @@ In my model the following features were used:
 
 ## App
 
-## Conclusions
+## Conclusion
+My content-based recommender was able to return very similar recommendations. My example used is the book ['Good Harbor' by Anita Diamant](https://www.goodreads.com/en/book/show/25717). This book describes "two women friends... sharing their personal histories and learning life's lessons." One character is "maternal and steady, a devoted children's librarian, a convert to Judaism, and mother to two grown sons. When her serene life is thrown into turmoil" the other "realizes that her husband and young daughter are becoming increasingly distant." This summary is strikingly similar to the plots of all 5 recommended books.:
+- ["Vinegar Hill" by A. Manette Ansay](https://goodreads.com/book/show/4352215): is about a wife "Dutifully accompanying her unemployed husband... endur[ing] an all-pervading darkness that threatens to destroy everything she is and everyone she loves"
+- ["Echo House" by Ward Just](https://www.goodreads.com/en/book/show/2189204): is about "three powerful generations of men in Washington, D.C., as they pursue power, money, and women"
+- ["The Heaviness of Things That Float" by Jennifer Manuel"](https://goodreads.com/book/show/29044469): is about "the lonely world of Bernadette, a woman... with no immediate family of her own" but a "community" and a "young man that Bernadette loves like a son is missing. The community is thrown into upheaval, and with the surface broken, raw dysfunction, pain and truths float to the light.
+- ["The House on Swiss Avenue" by Irene Sandell](https://goodreads.com/book/show/20336442) is about "two women together to unlock secrets that alter each of their lives," one of them "Adeline Sinclair has spent a lifetime devoted to memories and to the history of her family"
+- 
 
 
 ## Next Steps
