@@ -22,12 +22,13 @@ My data comes from the scraped
 
 ## Data Preparation
 
-## Modelling
+## Collaborative Filtering
 
-## Results
+## Content-Based
 
+## App
 
-## Impact
+## Conclusions
 
 
 ## Next Steps
