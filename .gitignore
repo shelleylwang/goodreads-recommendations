@@ -169,6 +169,9 @@ gr_reviews_per_book.csv
 metadata.csv
 metadata_and_reviews_4cii.csv
 metadata_and_reviews_4ciii.csv
+
+dtm.parquet
+reviews_nlp.csv
  
 meta_gr.csv
 GoodReads_100k_books.csv
