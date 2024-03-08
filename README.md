@@ -82,7 +82,7 @@ Finally, recommendation systems like this are overall applicable to any site and
 ├── data_cleaning_scratch.ipynb
 ├── Content_Based.ipynb
 ├── Collaborative_Filtering.ipynb
-├── presentation.pdf
+├── Capstone Presentation.pdf
 ├── .gitignore
 ├── LICENSE
 ├── README.md
