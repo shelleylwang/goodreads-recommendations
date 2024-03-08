@@ -171,6 +171,7 @@ metadata_and_reviews_4cii.csv
 metadata_and_reviews_4ciii.csv
 
 dtm.parquet
+df.csv
 reviews_nlp.csv
  
 meta_gr.csv
