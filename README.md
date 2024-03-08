@@ -18,9 +18,17 @@ GoodReads' power should also be placed in the context of the book industry as a 
 GoodReads is a massively popular site, averaging about 230 million views per month AND the book industry is expected to continue its impressive growth (SEMrush) (McLean). As such, GoodReads' ability to provide utility to a user is important to book industry profit. My research question is: can I build an accurate recommendation system for users? I will build two recommendation systems: a content-based recommender which takes in a book title and returns books similar to that book, and a collaborative filteirng recommender which finds users who are similar to each other and recommends what the others haven't read.
 
 ## Data Understanding
-My data can be found [here](https://mengtingwan.github.io/data/goodreads.html). It was scraped in 2017 by researches Wan and McAuley
+My data can be found [here](https://mengtingwan.github.io/data/goodreads.html). It was scraped in 2017 by researches Wan and McAuley. 
+
+I use 4 datasets from them. 
+1. The dataset 'meta_gr.csv' contains over 2.3 million rows. Each is an individual book, and it has columns with metadata such as isbn, description, links, authors, etc.
+2. The dataset 'goodreads_book_genres_initial.json' contains a list of the genres assigned to each book
+3. The dataset 'goodreads_book_authors.json' contains a list of all the author names assigned to each book
+4. The dataset 'goodreads_reviews_spoiler.json.gz' contains over 1.3 million individual rows. Each row is one user's text review and rating out of 5 for one specific book
 
 ## Data Preparation
+From my four datasets I was able to clean 3 datasets of interest for my two recommendation systems
+1. First I used dataset (1) 
 
 ## Collaborative Filtering
 
@@ -35,7 +43,8 @@ In my model the following features were used:
 3. The book's average rating out of 5. Some users may be interested only in what others consider high-quality writing. 
 4. The total count of ratings - i.e., how many users had rated that book. This feature was essentially a proxy for book popularity. More ratings = a more read book. Obviously, some users may prefer to read/be recommended more mainstream books, and some may prefer indie books.
 5. The number of pages that that book had. Presumably, some users prefer longer vs. shorter books
-6. The genre of the books were one-hot encoded out. 10 different genres were found. 
+6. The genre of the books were one-hot encoded out. 10 different genres were found.
+
 
 ## App
 
