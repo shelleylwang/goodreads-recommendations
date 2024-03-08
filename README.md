@@ -71,40 +71,10 @@ Finally, recommendation systems like this are overall applicable to any site and
 ## Repo Structure
 ```
 ├── data
-│   ├── gr_reviews_clean.csv
-│   ├── gr_reviews_full.csv
-│   ├── gr_reviews_per_book.csv
-│   ├── metadata.csv
-│   ├── metadata_and_reviews_4cii.csv
-│   ├── metadata_and_reviews_4ciii.csv
-│   ├── dtm.parquet
-│   ├── reviews_nlp.csv
-│   ├── meta_gr.csv
-│   ├── GoodReads_100k_books.csv
-│   ├── ratings.csv
-│   ├── goodreads_books.json.gz
-│   ├── goodreads_reviews_spoiler_raw.json
-│   ├── goodreads_reviews_spoiler_raw.json.gz
-│   ├── goodreads_reviews_spoiler.json.gz
-│   ├── goodreads_interactions.csv
-│   ├── goodreads_book_genres_initial.json
-│   ├── goodreads_book_genres_initial.json.gz
-│   ├── goodreads_book_works.json
-│   ├── goodreads_book_authors.json
-│   ├── goodreads_book_series.json
-│   ├── book_id_map.csv
-│   ├── user_id_map.csv
-│   ├── goodreads_books_romance.json.gz
-│   ├── goodreads_books_fantasy_paranormal.json.gz
-│   ├── goodreads_books_young_adult.json.gz
-│   ├── goodreads_books_comics_graphic.json.gz
-│   ├── goodreads_books_history_biography.json.gz
-│   ├── goodreads_books_mystery_thriller_crime.json.gz
-│   ├── goodreads_books_children.json.gz
-│   ├── goodreads_books_poetry.json.gz
-│   ├── goodreads_books_poetry.json
-│   ├── goodreads_interactions_poetry.json
-│   ├── goodreads_reviews_poetry.json
+│   ├── book_tags.csv
+│   ├── books.csv
+│   ├── tags.csv
+│   ├── to_read.csv
 ├── Images
 │   ├── readme_header.png
 │   ├── goodreads_traffic.png
