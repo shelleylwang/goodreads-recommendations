@@ -28,9 +28,14 @@ I use 4 datasets from them.
 
 ## Data Preparation
 From my four datasets I was able to clean 3 datasets of interest for my two recommendation systems. 
-a. First I used dataset (1) as the source for user-facing recommendations. As such, it needed all the book metadata. (1) was missing genres so I used dataset (2) to add in genre data, joining on the shared book_ids. I did the same using dataset (3) for authors' names. I then dropped some nonsense values from publication year. Finally, I imputed some nulls in page numbers using the genre-specific averages.
-b. Next I used dataset (4) to create a per-user rating dataset. I grouped by user, ending up with one row per user. I concatenated all their review text, then subsetted to just users who had written at least 5 reviews.
-c. Finally, I combined the 
+
+A. First I used dataset (1) as the source for user-facing recommendations. As such, it needed all the book metadata. (1) was missing genres so I used dataset (2) to add in genre data, joining on the shared book_ids. I did the same using dataset (3) for authors' names. I then dropped some nonsense values from publication year. 
+
+B. Next I used dataset (4) to create a per-user rating dataset. I grouped by user, ending up with one row per user. I concatenated all their review text, then subsetted to just users who had written at least 5 reviews.
+
+C. Finally, I combined datasets (A) and the pre-subsetted (B) into a per-book metadata + reviews dataset. I basically combined all the metadata for each book + all their text data (user reviews and summaries) into one dataframe. I removed nulls in text and genre data, then imputed nulls in page numbers using the genre-specific averages. This resulted in one row per book. 
+
+Dataset (B) was used for collaborative filtering, and dataset (C) was used for content-based. Dataset (A) was used in both to return recommendations.
 
 ## Collaborative Filtering
 
