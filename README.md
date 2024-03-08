@@ -18,13 +18,24 @@ GoodReads' power should also be placed in the context of the book industry as a 
 GoodReads is a massively popular site, averaging about 230 million views per month AND the book industry is expected to continue its impressive growth (SEMrush) (McLean). As such, GoodReads' ability to provide utility to a user is important to book industry profit. My research question is: can I build an accurate recommendation system for users? I will build two recommendation systems: a content-based recommender which takes in a book title and returns books similar to that book, and a collaborative filteirng recommender which finds users who are similar to each other and recommends what the others haven't read.
 
 ## Data Understanding
-My data comes from the scraped 
+My data can be found [here](https://mengtingwan.github.io/data/goodreads.html). It was scraped in 2017 by researches Wan and McAuley
 
 ## Data Preparation
 
 ## Collaborative Filtering
 
 ## Content-Based
+A content-based recommendation system uses various features of the products to calculate similarity scores that can be used to return the top most similar products to an inputted product. In this case, a user will be prompted to enter a book title and how many recommendations they would like, then my recommender system will return that number of similar books as recommendations. 
+
+In my model the following features were used:
+1. Concatenated text data consisting of the summary of a book and all of the text reviews of said book. I NLP processed that text data by lemmatizing it using WordNetLemmatizer (bringing the words down to their semantic stems, so that words like charged and charging become charg), removing stop words (non-semantic words), grabbing only words that are 3+ letters long, and tokenizing using RegExpTokenizer. Text data is invaluable in providing detail about a book: for example, if many users mention the word 'horse' in their reviews, we know that that book has something to do with animals. Then, the recommender system might find other books that mention 'horse'.
+
+   This text data was then vectorized using TfidfVectorizer. This type of vectorizer is very powerful for content-based classification because adds importance weight to certain tokens using a tf-idf score. The higher the tf-idf score, the more important that word is in that document compared to how important it is in all the documents.
+   
+3. The book's average rating out of 5. Some users may be interested only in what others consider high-quality writing. 
+4. The total count of ratings - i.e., how many users had rated that book. This feature was essentially a proxy for book popularity. More ratings = a more read book. Obviously, some users may prefer to read/be recommended more mainstream books, and some may prefer indie books.
+5. The number of pages that that book had. Presumably, some users prefer longer vs. shorter books
+6. The genre of the books were one-hot encoded out. 10 different genres were found. 
 
 ## App
 
