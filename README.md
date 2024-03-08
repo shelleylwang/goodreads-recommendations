@@ -50,26 +50,23 @@ In my model the following features were used:
 5. The number of pages that that book had. Presumably, some users prefer longer vs. shorter books
 6. The genre of the books were one-hot encoded out. 10 different genres were found.
 
-
-## App
-
 ## Conclusion
 My content-based recommender was able to return very similar recommendations. My example used is the book ['Good Harbor' by Anita Diamant](https://www.goodreads.com/en/book/show/25717). This book describes "two women friends... sharing their personal histories and learning life's lessons." One character is "maternal and steady, a devoted children's librarian, a convert to Judaism, and mother to two grown sons. When her serene life is thrown into turmoil" the other "realizes that her husband and young daughter are becoming increasingly distant." This summary is strikingly similar to the plots of all 5 recommended books.:
 - ["Vinegar Hill" by A. Manette Ansay](https://goodreads.com/book/show/4352215): is about a wife "Dutifully accompanying her unemployed husband... endur[ing] an all-pervading darkness that threatens to destroy everything she is and everyone she loves"
 - ["Echo House" by Ward Just](https://www.goodreads.com/en/book/show/2189204): is about "three powerful generations of men in Washington, D.C., as they pursue power, money, and women"
 - ["The Heaviness of Things That Float" by Jennifer Manuel"](https://goodreads.com/book/show/29044469): is about "the lonely world of Bernadette, a woman... with no immediate family of her own" but a "community" and a "young man that Bernadette loves like a son is missing. The community is thrown into upheaval, and with the surface broken, raw dysfunction, pain and truths float to the light.
 - ["The House on Swiss Avenue" by Irene Sandell](https://goodreads.com/book/show/20336442) is about "two women together to unlock secrets that alter each of their lives," one of them "Adeline Sinclair has spent a lifetime devoted to memories and to the history of her family"
-- 
+- ["The Waiting Place" by Sharon Arrksey](https://goodreads.com/book/show/29890955): The protagonist is described in the first few sentences as such: "As Susan prepares for the birth of her first child, she contemplates her role as a mother, wife, and partner on the family farm through the lives of the women closest to her"
+
+Clearly my recommendation system has used the feature data (the text data most heavily) to identify books that are set in the modern era, about adult women (mostly) who are going through crisis. Family dynamics are mentioned extensively. And these text examples are only coming from the book summaries, so they are just snippets of the data actually inputted into the model. An additional run of my system on a children's book about animals also returned children's books about animals. Thus, in conclusion, my recommendation system seems to have succeeded in providing similar books to a user's input. 
 
 
 ## Next Steps
 GoodReads has so many other metrics that could be added to these recommendation systems in order to make them more accurate and informative. 
 
-For example, a popular feature of the site is the ability to add certain titles to custom 'lists' like a "Want to Read" list. Users can add books that they're interested in to a compiled location that keeps track of which books are next on deck. This action has the potential to represent a datapoint of interest in a collaborative filtering recommendation system. Users who have added the same books to their "Want to Read" list would be considered more similar, and thus could be used to recommend each other further books. 
+For example, a popular feature of the site is the ability to add certain titles to custom 'lists' like a "Want to Read" list. Users can add books that they're interested in to a compiled location that keeps track of which books are next on deck. This action has the potential to represent a datapoint of interest. Books that have been labelled "Want to Read" more often are also probably more popular books. Furthermore, he GoodReads site could be scraped for additional information like book format: Audio, eBook, or print. This would add another feature to the model that would focus in on exactly what kinds of books would be most similar to what a user inputs.
 
-For the content-based recommendation system, the GoodReads site could be scraped for additional information like book format: Audio, eBook, or print. This would add another feature to the model that would focus in on exactly what kinds of books would be most similar to what a user inputs.  
-
-Obviously recommendation systems like this are overall applicable to any site and numerous other types of products. 
+Finally, recommendation systems like this are overall applicable to any site and numerous other types of products.
   
 ## Repo Structure
 ```
