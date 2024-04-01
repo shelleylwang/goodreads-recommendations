@@ -7,6 +7,14 @@
 * SEMrush. "Goodreads.com - Overview." SEMrush, https://www.semrush.com/website/goodreads.com/overview/
 * McLean, Kristen. "Book Sales in the U.S. Are Stronger Than Ever." Publishers Weekly, 19 Apr. 2022, https://www.publishersweekly.com/pw/by-topic/industry-news/bookselling/article/89040-book-sales-in-the-u-s-are-stronger-than-ever.html
 
+## Instructions for Viewing this Project
+Viewers should read/work in this order:
+1. Read Me
+2. [Data](https://mengtingwan.github.io/data/goodreads.html) (only if you want to download the data I used)
+3. Capstone Presentation.pdf (optional)
+4. data_prep.ipynb
+5. Content_Based.ipynb
+
 ## Background
 GoodReads is a centralized location for users to research books. It contains data such as summaries, ISBN, authors, page number, all versions of that book, etc. Critically, it is also a user-driven site: it aggregates user ratings, and allows users to post written reviews. It plays a crucial role at the nexus of a user's interest in a book and their transition into a purchaser of said book. As such, it is a middle-man in the lifecycle of a potential book sale. As you can see in the image below from SEMrush, a web traffic tracking site,  42% of users go directly to GoodReads, and 40% of them come from a Google search. After using the site, 42% go back to Google, and 22% go to Amazon. That 22% of people are likely going to Amazon to consider buying the book they were looking at. For the users who go back to Google, it is also possible that they plan to make purchases in another way. 
 
