@@ -1,6 +1,9 @@
 # GoodReads Recommendation Systems
 ![ReadMe header](images/readme_header.png)
 
+## Ongoing work: 
+I am currently building Collaborative Filtering Recommendation System for this dataset. Stay tuned for more changes in the Collaborative_Filtering.ipynb!
+
 ## Citations
 * Mengting Wan, Julian McAuley, "Item Recommendation on Monotonic Behavior Chains", in RecSys'18. [bibtex]
 * Mengting Wan, Rishabh Misra, Ndapa Nakashole, Julian McAuley, "Fine-Grained Spoiler Detection from Large-Scale Review Corpora", in ACL'19. [bibtex]
